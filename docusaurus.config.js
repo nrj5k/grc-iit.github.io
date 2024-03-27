@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const { themes } = require("prism-react-renderer");
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 
 const GNOSIS_SHORT = "GRC";
 const GNOSIS_TITLE = "Gnosis Research Center";
@@ -149,6 +150,11 @@ const config = {
             label: "Publications",
             position: "left",
           },
+          {
+            to: "/jobs",
+            label: "Job Opportunities",
+            position: "left",
+          },
           // {
           //   to: "/blog",
           //   label: "Blog",
@@ -199,6 +205,10 @@ const config = {
               {
                 label: "ChronoLog",
                 to: "/research/projects/chronolog",
+              },
+              {
+                label: "Labios",
+                to: "/research/projects/labios",
               },
               {
                 label: "Coeus",
@@ -264,8 +274,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} ${GNOSIS_TITLE} (${GNOSIS_SHORT}).`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: lightTheme,
+        darkTheme: darkTheme,
       },
     }),
 };
